@@ -4,7 +4,6 @@ class Liquibase < Formula
   url "https://package.liquibase.com/downloads/liquibase/homebrew/liquibase-4.33.0.tar.gz"
   sha256 "689acfcdc97bad0d4c150d1efab9c851e251b398cb3d6326f75e8aafe40ed578"
   license "Apache-2.0"
-  revision 1
 
   livecheck do
     url :stable
@@ -17,6 +16,8 @@ class Liquibase < Formula
     rebuild 1
     sha256 cellar: :any_skip_relocation, all: "222519225b5374762241360ed0c6720d11f31a6b996c2df9268fe321bf7917aa"
   end
+
+  deprecate! date: "2025-09-30", because: "uses proprietary licensed software in v5"
 
   depends_on "openjdk"
 
